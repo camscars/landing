@@ -2,8 +2,15 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+
+
+.carousel {
+  background-color: #383838;
+}
+
 body {
   padding-bottom: 40px;
+  background-color: #303030;
   color: #5a5a5a;
 }
 

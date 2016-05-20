@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Cameron Woody</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"></h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="{% url 'about' %}">About Me</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                  <li><a href="{% url 'project_list' %}">Project List</a></li>
+                  <li><a href="{% url 'shop:product_list' %}">Store</a></li>
+                  <li><a href="{% url 'news:news_list' %}">NewsFeed</a></li>
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+          {% block content %}
+          <div class="inner cover">
+            <h1 class="cover-heading">Cameron702.info</h1>
+            <p class="lead">Hello, my name is Cameron Woody and I am a 24 year old Django Developer. I currently only build fun, smaller projects for myself and do a bit of freelancing, but I am interested in getting a real professional job soon.
+            <br><br>I have a pretty diverse set of skills, ranging from design with HTML, CSS and Javascript to full on Back-End with Django.
+            <br><br>Site still a work in progress.</p>
+            <p class="lead">
+             <!-- <a href="#" class="btn btn-lg btn-default">Continue</a> --> <!--- Put photo here -->
+            </p>
+          </div>
+          <a href="https://www.linkedin.com/pub/cameron-woody/113/20b/576">
+      
+          <img src="{% static 'img/linkedin_alt.png' %}" width="90" height="50" border="0" alt="View Cameron Woody's profile on LinkedIn">
+        
+    </a>
+          <a href="https://github.com/camscars">
+          <img src="{% static 'img/GitHub_logo.png' %}" width="90" height="50" border="0" alt="View Cameron Woody's profile on GitHub">
+          </a>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cameron 2016</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+{% endblock %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

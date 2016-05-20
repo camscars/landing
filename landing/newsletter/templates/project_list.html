@@ -1,53 +1,19 @@
-{% load staticfiles %}    
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <script>
-      // Load this when the DOM is ready
-      $(function(){
-        // You used .myCarousel here. 
-        // That's the class selector not the id selector,
-        // which is #myCarousel
-        $('#myCarousel').carousel();
-      });
-    </script>
-
-    <title>Camsite</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'navbar-static-top.css' %}" rel="stylesheet" >
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+{% extends 'homepage.html' %}
+{% load static %}
+ <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
   </head>
 
-  {% include 'navbar.html' %}
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   {% block content %}
+       <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <div class="inner cover">
+            <p class="lead"><br><br>Small sample of some of my projects. For a full list check out my <a href="http://www.github.com/camscars">Github</a>.</p>
+
+    <div id="myCarousel" class="carousel slide" style="width: auto; height: 600; max-height: 600px; margin: 0 auto" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -55,10 +21,11 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
         <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="{% static 'img/store.png' %}" alt="First slide">
+          <img class="first-slide" src="{% static 'img/store.png' %}" max-height="100" width="1000" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Store Application</h1>
@@ -68,17 +35,17 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="{% static 'img/blog.png' %}" alt="Second slide">
+          <img class="second-slide" src="{% static 'img/blog.png' %}" max-height="100" width="1000" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Blog Application</h1>
-              <p>Click to view the code for my full-featured blog application! After building a sloppy, unorganized one when beginning to learn django, I decided to make a more robust version now that I know more.</p>
+              <p>Click to view the code for my full-featured blog application!</p>
               <p><a class="btn btn-lg btn-primary" href="http://github.com/camscars/blog" role="button">View Blog App</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="{% static 'img/edu.png' %}" alt="Third slide">
+          <img class="third-slide" src="{% static 'img/edu.png' %}" height="600" width="1000" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Online Learning Application</h1>
@@ -88,7 +55,7 @@
             </div>
           </div>
         <div class="item">
-          <img class="fourth-slide" src="{% static 'img/wine.png' %}" alt="Fourth slide">
+          <img class="fourth-slide" src="{% static 'img/wine.png' %}" height="600" width="1000" alt="Fourth slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Wine Review Application</h1>
@@ -99,12 +66,22 @@
           </div>
 
         <div class="item">
-          <img class="fifth-slide" src="{% static 'img/github_alt.png' %}" alt="Fifth slide">
+          <img class="fifth-slide" src="{% static 'img/github_alt.png' %}" height="600" width="1000" alt="Fifth slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Github Query</h1>
               <p>Small project to query the github api for a user and return relevant data about that user. </p>
               <p><a class="btn btn-lg btn-primary" href="http://www.github.com/camscars/ghubquery" role="button">View</a></p>
+              </div>
+              </div>
+              </div>
+        <div class="item">
+          <img class="sixth-slide" src="{% static 'img/rss.gif' %}" height="200" width="1000" alt="Sixth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>News Feed</h1>
+              <p>Small project to parse RSS feeds and return all news in an ordered list. </p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.github.com/camscars/news_agg" role="button">View</a></p>
               </div>
         </div>
       </div>
@@ -118,44 +95,17 @@
       </a>
     </div><!-- /.carousel -->
 
-
+{% endblock %}
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
-   <!--
-
-    <div class="container marketing">
-
-
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>About me</h2>
-          <p>Name's Cameron, I am an aspiring Web developer from Las Vegas, NV looking for my first job opportunity..</p>
-          <p><a class="btn btn-default" href="{% url 'about' %}" role="button">Read more &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'img/linkedin-logo.png' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Linkedin</h2>
-          <p>My Linkedin profile.</p>
-          <p><a class="btn btn-default" href="https://www.linkedin.com/in/cameron-woody-57620b113" role="button">View profile &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'img/GitHub-Mark.png' %}" alt="Generic placeholder image" width="140" height="140">
-          <h2>Github</h2>
-          <p>Click to see my (newish) GitHub profile!</p>
-          <p><a class="btn btn-default" href="http://www.github.com/camscars" role="button">View Github &raquo;</a></p>
-        </div>
-      </div>
-              
-
+      <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Go Eagles!</h2>
+          <h2 class="featurette-heading">Go Eagles! <!--<span class="text-muted">2016</span> --></h2>
           <p class="lead">Little random, but huge Eagles fan and wanted to try the featurette out, so here this is.</p>
         </div>
         <div class="col-md-5">
@@ -165,13 +115,28 @@
 
 
       <hr class="featurette-divider">
+        <!--
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
 
       <hr class="featurette-divider">
-                                            -->
+
       <!-- /END THE FEATURETTES -->
 
 
       <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Camsite. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
     </div><!-- /.container -->
 
 

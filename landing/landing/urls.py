@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^shop/', include('shop.urls', namespace='shop')),
     url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^news/', include('news.urls', namespace='news')),
+    url(r'^project_list/', 'newsletter.views.project_list', name='project_list')
 ]
 
 if settings.DEBUG:

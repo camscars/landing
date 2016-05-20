@@ -12,10 +12,12 @@
           <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/triangle-circle.jpg' %}"/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav pull-right">
             <li class="active"><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'project_list' %}">Project List</a></li>
+            <li><a href="{% url 'shop:product_list' %}">Store</a></li>
             <li><a href="{% url 'news:news_list' %}">News Feed</a></li>
         </div><!--/.nav-collapse -->
       </div>

@@ -7,13 +7,16 @@ def home(request):
 	form = SignUpForm(request.POST or None)
 	if form.is_valid():
 		form.save()
-	return render(request, 'home.html', {'title': title, 'form': form})
+	return render(request, 'homepage.html', {'title': title, 'form': form})
 
 def about(request):
 	return render(request, "about.html")
 
+def project_list(request):
+	return render(request, "project_list.html")
+
 def contact(request):
-	title = 'Contact Us'
+	title = 'Contact Me'
 	form = ContactForm(request.POST or None)
 	if form.is_valid():
 		form_email = form.cleaned_data.get("email")	
