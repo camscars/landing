@@ -142,10 +142,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-if not os.environ.get("HOME") == ‘/PATH/TO/YOUR/HOME‘:
-    # Parse database configuration from $DATABASE_URL
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
 
 STATIC_URL = '/static/'
 
